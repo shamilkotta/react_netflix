@@ -17,3 +17,13 @@
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+.collection-head {
+  color: white;
+  font-size: 25px;
+  margin-left: 10px;
+}
+
+.collection-container {
+  margin-bottom: 60px;
+}
