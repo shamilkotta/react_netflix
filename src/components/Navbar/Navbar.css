@@ -1,0 +1,34 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  color: white;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+nav > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav > div > svg {
+  margin: 0 25px 0 0;
+}
+
+nav > div > h5 {
+  margin: 2px 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.profilePic {
+  background-color: rgb(46, 90, 202);
+  padding: 8px 12px;
+  text-align: center;
+  border-radius: 8px;
+}
