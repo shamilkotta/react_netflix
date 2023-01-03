@@ -1,0 +1,87 @@
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(80, 12, 237);
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: start;
+  padding: 50px;
+  box-sizing: border-box;
+  color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.61);
+}
+
+.hero-content {
+  z-index: 1;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.hero-content > h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  margin-top: 0;
+  letter-spacing: 3px;
+}
+
+.hero-content > p {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  letter-spacing: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content > p > img {
+  margin: 0 5px 0 0;
+}
+
+.hero-content > div >button {
+  padding: 11px 28px;
+  border-radius: 2px;
+  border: 0;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+}
+
+.hero-content > div > button:first-child {
+  background-color: white;
+  margin-right: 10px;
+}
+
+.hero-content > div > button > img {
+  margin: 0 8px;
+}
+
+.hero-content > div > button:last-child {
+  color:  white;
+  background-color: rgb(96, 96, 96);
+  padding: 12px 28px;
+}
+
+.hero-content > div > button:last-child > span {
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 2px 8px;
+}
+
+.hero-content > div > button > span {
+  margin: 0 8px;
+}

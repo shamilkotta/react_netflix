@@ -8,6 +8,7 @@ nav {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 2;
 }
 
 nav > div {
@@ -22,7 +23,7 @@ nav > div > svg {
 
 nav > div > h5 {
   margin: 2px 12px;
-  font-size: 16px;
+  font-size: 17px;
   cursor: pointer;
 }
 
