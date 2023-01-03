@@ -52,7 +52,7 @@
   margin: 0 5px 0 0;
 }
 
-.hero-content > div >button {
+.hero-content > div > button {
   padding: 11px 28px;
   border-radius: 2px;
   border: 0;
@@ -71,7 +71,7 @@
 }
 
 .hero-content > div > button:last-child {
-  color:  white;
+  color: white;
   background-color: rgb(96, 96, 96);
   padding: 12px 28px;
 }
