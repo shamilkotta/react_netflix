@@ -24,10 +24,10 @@ jobs:
           node-version: 18
 
       - name: install dependencies
-        run: npm ci
+        run: yarn install
 
       - name: run lint
-        run: npm run lint
+        run: yarn run lint
 
   format:
     name: Format code
@@ -42,7 +42,7 @@ jobs:
           node-version: 18
 
       - name: install dependencies
-        run: npm ci
+        run: yarn install
 
       - name: run format
-        run: npm run format:check
+        run: yarn run format:check

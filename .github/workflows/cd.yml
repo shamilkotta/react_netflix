@@ -15,12 +15,12 @@ jobs:
 
       - name: Build
         uses: actions/setup-node@v3
-      - run: npm ci
-      - run: npm run build
+      - run: yarn install
+      - run: yarn run build
 
       - name: Deploy
         run: |
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-          npx gh-pages -d build -u "github-actions-bot <support+actions@github.com>"
+          yarn run gh-pages -d build -u "github-actions-bot <support+actions@github.com>"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
