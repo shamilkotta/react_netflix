@@ -11,5 +11,7 @@ module.exports = {
     sourceType: "module",
   },
   plugins: ["react"],
-  rules: {},
+  rules: {
+    "jsx-a11y/media-has-caption": ["off"],
+  },
 };
