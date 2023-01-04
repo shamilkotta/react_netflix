@@ -1,7 +1,9 @@
+/* eslint-disable react/prop-types */
+
 import React from "react";
 import "./Details.css";
 
-function Details() {
+function Details({ showModal }) {
   return (
     <div className="details">
       <div className="details-card">
@@ -9,6 +11,13 @@ function Details() {
           <img src="" alt="poster" />
         </div>
         <div className="details-data">
+          <button
+            type="button"
+            className="details-close"
+            onClick={() => showModal(false)}
+          >
+            X
+          </button>
           <h3>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
             aspernatur harum cupiditate.
