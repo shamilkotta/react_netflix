@@ -1,7 +1,8 @@
 import axios from "axios";
+import constants from "../utils/constants";
 
 const axiosInstance = axios.create({
-  baseURL: "https://but-jsd-3.herokuapp.com/api/v1",
+  baseURL: constants.baseUrl,
 });
 
 export default axiosInstance;
