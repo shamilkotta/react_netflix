@@ -24,7 +24,7 @@
 
 .hero-content {
   padding: 50px;
-  z-index: 2;
+  z-index: 1;
   align-self: flex-end;
   display: flex;
   flex-direction: column;
@@ -100,7 +100,7 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  z-index: 1;
+  z-index: 0;
 }
 
 .hero-overlay {
@@ -110,6 +110,6 @@
   bottom: 0;
   right: 0;
   z-index: 2;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 1;
+  background: rgba(0, 0, 0, 0.148);
+  z-index: 0;
 }

@@ -9,6 +9,7 @@
   margin-left: 13px;
   position: relative;
   cursor: pointer;
+  z-index: 0;
 }
 
 .movie-card:hover {
