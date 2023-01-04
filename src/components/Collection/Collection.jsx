@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import MovieCard from "../MovieCard/MovieCard";
 import "./Collection.css";
 
-function Collection({ collection }) {
+function Collection({ collection, showModal }) {
   const ref = useRef(null);
   const [width, setWidth] = useState();
   const [scrollPos, setScrollPos] = useState(0);
@@ -43,22 +43,22 @@ function Collection({ collection }) {
         </button>
       )}
       <div className="collection" ref={ref}>
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
+        <MovieCard showModal={showModal} />
+        <MovieCard showModal={showModal} />
+        <MovieCard showModal={showModal} />
+        <MovieCard showModal={showModal} />
+        <MovieCard showModal={showModal} />
+        <MovieCard showModal={showModal} />
+        <MovieCard showModal={showModal} />
+        <MovieCard showModal={showModal} />
+        <MovieCard showModal={showModal} />
+        <MovieCard showModal={showModal} />
+        <MovieCard showModal={showModal} />
+        <MovieCard showModal={showModal} />
+        <MovieCard showModal={showModal} />
+        <MovieCard showModal={showModal} />
+        <MovieCard showModal={showModal} />
+        <MovieCard showModal={showModal} />
       </div>
       {scrollPos + width < 4500 && (
         <button
