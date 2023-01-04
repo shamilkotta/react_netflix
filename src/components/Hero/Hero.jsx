@@ -1,12 +1,16 @@
 import React from "react";
-import heroImage from "./wednesday.jpg";
+import heroContent from "./trailer.mp4";
 import playImage from "./play.png";
 import netflixImage from "./netflix.png";
 import "./Hero.css";
 
 function Hero() {
   return (
-    <div className="hero" style={{ backgroundImage: `url(${heroImage})` }}>
+    <div className="hero">
+      <video className="heroContent" autoPlay muted loop>
+        <source src={heroContent} type="video/mp4" />
+      </video>
+      <div className="hero-overlay" />
       <div className="hero-content" style={{ height: "100%" }}>
         <p>
           {" "}
