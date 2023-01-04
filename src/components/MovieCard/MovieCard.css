@@ -10,6 +10,10 @@
   position: relative;
   cursor: pointer;
   z-index: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 0 0 10px 10px;
 }
 
 .movie-card:hover {
@@ -18,14 +22,14 @@
   box-shadow: 0px 0px 10px 2px rgb(0, 0, 0);
 }
 
-.movie-card:hover::after {
+.movie-card::after {
   content: "";
   position: absolute;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.41);
+  background: rgba(0, 0, 0, 0.5);
   border-radius: 5px;
 }
 
@@ -43,4 +47,9 @@
   display: block;
   opacity: 1;
   transition: opacity 0.15s;
+}
+
+.movie-card > h3 {
+  color: rgb(255, 255, 255);
+  z-index: 1;
 }
