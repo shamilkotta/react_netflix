@@ -1,0 +1,49 @@
+.details {
+  width: 100%;
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.637);
+  z-index: 3 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.details-card {
+  background-color: rgb(52, 52, 52);
+  width: 90%;
+  max-width: 900px;
+  max-height: 70%;
+  border-radius: 3px;
+  box-shadow: 0px 0px 10px black;
+  display: flex;
+  padding: 10px;
+  column-gap: 20px;
+  box-sizing: border-box;
+  color: white;
+}
+
+.details-poster {
+  width: 40%;
+  border: 1px solid rgb(151, 151, 151);
+}
+
+.details-data {
+  width: 60%;
+}
+
+.details-data > h3 {
+  color: rgb(197, 197, 197);
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.details-data > p {
+  color: rgb(173, 173, 173);
+  overflow: auto;
+  font-size: 16px;
+}
