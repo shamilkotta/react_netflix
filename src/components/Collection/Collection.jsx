@@ -2,11 +2,19 @@
 import React, { useEffect, useRef, useState } from "react";
 import MovieCard from "../MovieCard/MovieCard";
 import "./Collection.css";
+import axios from "../../config/api";
 
-function Collection({ collection, showModal }) {
+function Collection({ collection, url, showModal, setModalData }) {
   const ref = useRef(null);
   const [width, setWidth] = useState();
   const [scrollPos, setScrollPos] = useState(0);
+  const [movies, setMovies] = useState([]);
+
+  useEffect(() => {
+    axios.get(url).then((response) => {
+      setMovies(response.data.results);
+    });
+  }, []);
 
   useEffect(() => {
     ref.current.addEventListener("scroll", () => {
@@ -17,7 +25,7 @@ function Collection({ collection, showModal }) {
         setScrollPos(ref.current.scrollLeft);
       });
     };
-  }, []);
+  }, [scrollPos]);
 
   useEffect(() => {
     setWidth(ref.current.offsetWidth);
@@ -43,22 +51,23 @@ function Collection({ collection, showModal }) {
         </button>
       )}
       <div className="collection" ref={ref}>
-        <MovieCard showModal={showModal} />
-        <MovieCard showModal={showModal} />
-        <MovieCard showModal={showModal} />
-        <MovieCard showModal={showModal} />
-        <MovieCard showModal={showModal} />
-        <MovieCard showModal={showModal} />
-        <MovieCard showModal={showModal} />
-        <MovieCard showModal={showModal} />
-        <MovieCard showModal={showModal} />
-        <MovieCard showModal={showModal} />
-        <MovieCard showModal={showModal} />
-        <MovieCard showModal={showModal} />
-        <MovieCard showModal={showModal} />
-        <MovieCard showModal={showModal} />
-        <MovieCard showModal={showModal} />
-        <MovieCard showModal={showModal} />
+        {movies.length ? (
+          movies.map((ele) => (
+            <MovieCard
+              img={ele.backdrop_path}
+              title={ele.original_title || ele.original_name}
+              ele={{
+                title: ele.original_title || ele.original_name,
+                overview: ele.overview,
+                poster: ele.poster_path,
+              }}
+              showModal={showModal}
+              setModalData={setModalData}
+            />
+          ))
+        ) : (
+          <p>Loading...</p>
+        )}
       </div>
       {scrollPos + width < 4500 && (
         <button
