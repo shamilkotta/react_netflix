@@ -10,8 +10,8 @@ function Home() {
       <Navbar />
       <Hero />
       <div className="movies-collection">
-        <Collection />
-        <Collection />
+        <Collection collection="New Realess" />
+        <Collection collection="Trending" />
       </div>
     </div>
   );
